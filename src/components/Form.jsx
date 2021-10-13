@@ -7,7 +7,6 @@ class Form extends React.Component {
         <input
           type="text"
           data-testid="name-input"
-          onChange={ onInputChange }
         />
         <input type="textarea" data-testid="description-input" />
         <input type="number" data-testid="attr1-input" />

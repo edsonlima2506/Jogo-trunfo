@@ -4,7 +4,11 @@ class Form extends React.Component {
   render() {
     return (
       <form action="">
-        <input type="text" data-testid="name-input" />
+        <input
+          type="text"
+          data-testid="name-input"
+          onChange={ onInputChange }
+        />
         <input type="textarea" data-testid="description-input" />
         <input type="number" data-testid="attr1-input" />
         <input type="number" data-testid="attr2-input" />

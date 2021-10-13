@@ -1,12 +1,22 @@
+/* eslint-disable react-redux/no-unused-prop-types */
+/* eslint-disable react/no-unused-prop-types */
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class Form extends React.Component {
   render() {
+    const { card } = this.cardName;
+    let { oninput } = this.onInputChange;
+    oninput = () => {
+      'Houve mudança';
+    };
     return (
       <form action="">
         <input
           type="text"
           data-testid="name-input"
+          value={ card }
+          onChange={ oninput }
         />
         <input type="textarea" data-testid="description-input" />
         <input type="number" data-testid="attr1-input" />
@@ -26,5 +36,11 @@ class Form extends React.Component {
     );
   }
 }
+
+Form.propTypes = {
+  cardName: PropTypes.string.isRequired,
+  onInputChange: PropTypes.func.isRequired,
+  onSaveButtonClick: PropTypes.func.isRequired,
+};
 
 export default Form;

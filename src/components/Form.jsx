@@ -1,65 +1,61 @@
-/* eslint-disable react-redux/no-unused-prop-types */
-/* eslint-disable react/no-unused-prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
 
 class Form extends React.Component {
   render() {
-    const { cardName: card,
-      cardDescription: description,
-      cardAttr1: atr1,
-      cardAttr2: atr2,
-      cardAttr3: atr3,
-      cardImage: image,
-      cardRare: rare,
-      cardTrunfo: trunfo,
-      isSaveButtonDisabled: buttonDisable,
-      onSaveButtonClick: buttonEnable,
-      onInputChange: inputChange,
-    } = this.props;
+    const { cardName, cardDescription, cardAttr1, cardAttr2, cardAttr3, cardImage,
+      cardRare, cardTrunfo, isSaveButtonDisabled, onSaveButtonClick,
+      onInputChange } = this.props;
 
     return (
       <form action="">
         <input
           type="text"
           data-testid="name-input"
-          value={ card }
-          onChange={ inputChange }
+          name="cardName"
+          value={ cardName }
+          onChange={ onInputChange }
         />
         <input
           type="textarea"
           data-testid="description-input"
-          value={ description }
-          onChange={ inputChange }
+          name="cardDescription"
+          value={ cardDescription }
+          onChange={ onInputChange }
         />
         <input
           type="number"
           data-testid="attr1-input"
-          value={ atr1 }
-          onChange={ inputChange }
+          name="cardAttr1"
+          value={ cardAttr1 }
+          onChange={ onInputChange }
         />
         <input
           type="number"
           data-testid="attr2-input"
-          value={ atr2 }
-          onChange={ inputChange }
+          name="cardAttr2"
+          value={ cardAttr2 }
+          onChange={ onInputChange }
         />
         <input
           type="number"
           data-testid="attr3-input"
-          value={ atr3 }
-          onChange={ inputChange }
+          name="cardAttr3"
+          value={ cardAttr3 }
+          onChange={ onInputChange }
         />
         <input
           type="text"
           data-testid="image-input"
-          value={ image }
-          onChange={ inputChange }
+          name="cardImage"
+          value={ cardImage }
+          onChange={ onInputChange }
         />
         <select
           data-testid="rare-input"
-          value={ rare }
-          onChange={ inputChange }
+          name="cardRare"
+          value={ cardRare }
+          onChange={ onInputChange }
         >
           <option value="normal" id="normal">Normal</option>
           <option value="raro" id="normal">Raro</option>
@@ -69,16 +65,18 @@ class Form extends React.Component {
         <input
           type="checkbox"
           data-testid="trunfo-input"
-          checked={ trunfo }
-          onChange={ inputChange }
+          name="cardTrunfo"
+          checked={ cardTrunfo }
+          onChange={ onInputChange }
         />
         <button
           data-testid="save-button"
           type="submit"
-          disabled={ buttonDisable }
-          onChange={ inputChange }
-          onClick={ buttonEnable }
+          disabled={ isSaveButtonDisabled }
+          onChange={ onInputChange }
+          onClick={ onSaveButtonClick }
         >
+          {' '}
           Criar
         </button>
       </form>
@@ -95,7 +93,7 @@ Form.propTypes = {
   cardImage: PropTypes.string.isRequired,
   cardRare: PropTypes.string.isRequired,
   cardTrunfo: PropTypes.bool.isRequired,
-  isSaveButtonDisabled: PropTypes.bool.isRequired,
+  isSaveButtonDisabled: PropTypes.func.isRequired,
   onSaveButtonClick: PropTypes.func.isRequired,
   onInputChange: PropTypes.func.isRequired,
 };

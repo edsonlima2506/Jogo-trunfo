@@ -74,7 +74,7 @@ class Form extends React.Component {
         />
         <button
           data-testid="save-button"
-          type="submit"
+          type="button"
           disabled={ isSaveButtonDisabled }
           onChange={ onInputChange }
           onClick={ onSaveButtonClick }

@@ -15,6 +15,7 @@ class Form extends React.Component {
           name="cardName"
           value={ cardName }
           onChange={ onInputChange }
+          placeholder="Nome da carta"
         />
         <input
           type="textarea"
@@ -22,6 +23,7 @@ class Form extends React.Component {
           name="cardDescription"
           value={ cardDescription }
           onChange={ onInputChange }
+          placeholder="Descrição da carta"
         />
         <input
           type="number"
@@ -50,6 +52,7 @@ class Form extends React.Component {
           name="cardImage"
           value={ cardImage }
           onChange={ onInputChange }
+          placeholder="Link da imagem"
         />
         <select
           data-testid="rare-input"
@@ -87,13 +90,13 @@ class Form extends React.Component {
 Form.propTypes = {
   cardName: PropTypes.string.isRequired,
   cardDescription: PropTypes.string.isRequired,
-  cardAttr1: PropTypes.string.isRequired,
-  cardAttr2: PropTypes.string.isRequired,
-  cardAttr3: PropTypes.string.isRequired,
+  cardAttr1: PropTypes.number.isRequired,
+  cardAttr2: PropTypes.number.isRequired,
+  cardAttr3: PropTypes.number.isRequired,
   cardImage: PropTypes.string.isRequired,
   cardRare: PropTypes.string.isRequired,
   cardTrunfo: PropTypes.bool.isRequired,
-  isSaveButtonDisabled: PropTypes.func.isRequired,
+  isSaveButtonDisabled: PropTypes.bool.isRequired,
   onSaveButtonClick: PropTypes.func.isRequired,
   onInputChange: PropTypes.func.isRequired,
 };

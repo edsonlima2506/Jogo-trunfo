@@ -20,7 +20,6 @@ class App extends React.Component {
 
     this.onInputChange = this.onInputChange.bind(this);
     this.isSaveButtonDisabled = this.isSaveButtonDisabled.bind(this);
-    this.onSaveButtonClick = this.onSaveButtonClick.bind(this);
   }
 
   onInputChange({ target }) {
@@ -33,20 +32,11 @@ class App extends React.Component {
   }
 
   onSaveButtonClick() {
-    const inputName = document.getElementsByName('cardName');
-    const inputDescription = document.getElementsByName('cardDescription');
-    const inputImage = document.getElementsByName('cardImage');
-    const inputCardAttr1 = document.getElementsByName('cardAttr1');
-    const inputCardAttr2 = document.getElementsByName('cardAttr2');
-    const inputCardAttr3 = document.getElementsByName('cardAttr3');
-    const inputRare = document.getElementsByName('cardRare');
-    inputName[0].value = '';
-    inputDescription[0].value = '';
-    inputImage[0].value = '';
-    inputCardAttr1[0].value = 0;
-    inputCardAttr2[0].value = 0;
-    inputCardAttr3[0].value = 0;
-    inputRare[0].value = 'normal';
+    this.setState({
+      cardName: '',
+      cardDescription: '',
+      cardImage: '',
+    });
   }
 
   isSaveButtonDisabled() {
@@ -85,9 +75,9 @@ class App extends React.Component {
         <Form
           cardName={ cardName }
           cardDescription={ cardDescription }
-          cardAttr1={ Number(cardAttr1) }
-          cardAttr2={ Number(cardAttr2) }
-          cardAttr3={ Number(cardAttr3) }
+          cardAttr1={ cardAttr1 }
+          cardAttr2={ cardAttr2 }
+          cardAttr3={ cardAttr3 }
           cardImage={ cardImage }
           cardRare={ cardRare }
           cardTrunfo={ cardTrunfo }
@@ -98,9 +88,9 @@ class App extends React.Component {
         <Card
           cardName={ cardName }
           cardDescription={ cardDescription }
-          cardAttr1={ Number(cardAttr1) }
-          cardAttr2={ Number(cardAttr2) }
-          cardAttr3={ Number(cardAttr3) }
+          cardAttr1={ cardAttr1 }
+          cardAttr2={ cardAttr2 }
+          cardAttr3={ cardAttr3 }
           cardImage={ cardImage }
           cardRare={ cardRare }
           cardTrunfo={ cardTrunfo }

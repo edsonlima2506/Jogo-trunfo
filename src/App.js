@@ -9,9 +9,9 @@ class App extends React.Component {
     this.state = {
       cardName: '',
       cardDescription: '',
-      cardAttr1: 0,
-      cardAttr2: 0,
-      cardAttr3: 0,
+      cardAttr1: '0',
+      cardAttr2: '0',
+      cardAttr3: '0',
       cardImage: '',
       cardRare: '',
       cardTrunfo: false,
@@ -48,12 +48,12 @@ class App extends React.Component {
     || cardDescription === ''
     || cardImage === ''
     || cardRare === ''
-    || cardAttr1 > MAX_ATTR
-    || cardAttr2 > MAX_ATTR
-    || cardAttr3 > MAX_ATTR
-    || cardAttr1 < 0
-    || cardAttr2 < 0
-    || cardAttr3 < 0
+    || Number(cardAttr1) > MAX_ATTR
+    || Number(cardAttr2) > MAX_ATTR
+    || Number(cardAttr3) > MAX_ATTR
+    || Number(cardAttr1) < 0
+    || Number(cardAttr2) < 0
+    || Number(cardAttr3) < 0
     || (Number(cardAttr1) + Number(cardAttr2) + Number(cardAttr3)) > MAX_SUM_ATTR
     ) {
       this.setState({

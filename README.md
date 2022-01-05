@@ -23,7 +23,7 @@
  Saber utilizar o 'state' do React para fazer alterações em tempo real </br>
  é crucial para montar um interface dinãmica para o usuário.
 
-## Instalando dependencias
+## Instalando as dependências
 
 1. Clone o repositório
   * `git clone git@github.com:edsonlima2506/Jogo-trunfo.git`

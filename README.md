@@ -1,7 +1,8 @@
 # Jogo de Trunfo
 
  O objetivo do projeto foi desenvolver um ambiente onde é possível </br>
- criar um baralho com cartas personalizadas, contendo uma imagem, nome e atributos.
+ criar um baralho com cartas personalizadas, contendo uma imagem, nome, descrição e atributos. </br>
+ Além de ser possível visuzlizar um deck com as cartas criadas.
  
  ## Tecnologias
  
@@ -17,6 +18,10 @@
  do React para fazer alterações em tempo real e transmitir informações.
  
  ## Resultado
+
+https://user-images.githubusercontent.com/81549048/148435292-e9d22cf4-b008-411a-a4a3-2377569d8fc8.mp4
+
+
  
  ## Casos de uso
  

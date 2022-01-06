@@ -1,0 +1,16 @@
+input {
+  height: 40px;
+  margin: 10px 10px 10px 0;
+  width: 200px;
+}
+
+button {
+  background-color: rgb(73, 207, 73);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-weight: 900;
+  height: 40px;
+  width: 200px;
+}
